@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=p">
+    <title>Tienda de Videojuegos</title>
+    <link rel="icon" href="../image/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>tienda de video juegos</h1>
+        <nav>
+            <ul>
+                <a href="../index.html">Inicio</a>
+                <a href="accesorios.html">Funkos</a>
+                <a href="mandos.html">Mandos</a>
+                <a href="consolas.html">Consolas</a>
+                <a href="teclados.html">teclados</a>
+                <a href="ordenadores.html">Ordenadores</a>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        body {
+          background-image: url(fondo/gta-vi-grand-theft-auto-6_3440x1440_xtrafondos.com.jpg);
+          background-size: cover;        /* Ajusta la imagen al tamaño de la pantalla */
+          background-position: center;   /* Centrada */
+          background-repeat: no-repeat;  /* Que no se repita */
+        }
+      </style>
+
+
+    <div class="video-youtube">
+        <iframe  width="2000" height="375" src="https://www.youtube.com/embed/cxXvYJyBlc4?si=HdGfQI7nNwxAvIN9" allowfullscreen></iframe>
+      </div>    
+
+    <!--SE PROCEDE A CREAR CHECKBOX PARA CADA IMAGEN-->
+    <input type="checkbox" id="img1">
+    <input type="checkbox" id="img2">
+    <input type="checkbox" id="img3">
+
+    <section class="galeria">
+        <label class="imagen" for="img1">
+            <img src="mandos/Mando astro.webp" alt="Montaña">
+        </label>
+        <label class="imagen" for="img2">
+            <img src="mandos/Mando fornite.webp" alt="Bosque">
+        </label>
+        <label class="imagen" for="img3">
+            <img src="mandos/mando ps5.webp" alt="Playa">
+        </label>
+    </section>
+
+    <!--SE PROCEDE A CREAR LOS MODALES-->
+    <!--MODAL 1-->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <label class="cerrar" for="img1">&times;</label>
+            <img src="mandos/Mando astro.webp" alt="Montaña grande">
+            <h2>Montaña</h2>
+            <p>Una vista hermosa de una montaña al amanecer</p>
+        </div>
+    </div>
+
+    <!--MODAL 2-->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <label class="cerrar" for="img2">&times;</label>
+            <img src="mandos/Mando fornite.webp" alt="Bosque grande">
+            <h2>Bosque</h2>
+            <p>Un bosque denso y misterioso en la neblina</p>
+        </div>
+    </div>
+
+    <!--MODAL 3-->
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <label class="cerrar" for="img3">&times;</label>
+            <img src="mandos/mando ps5.webp" alt="Playa grande">
+            <h2>Playa</h2>
+            <p>Relajante vista de la playa en verano</p>
+        </div>
+    </div>
+<!--ddddddddddddd-->
+
+<div class="video-youtube">
+    <iframe  width="2000" height="315" src="https://www.youtube.com/embed/cxXvYJyBlc4?si=HdGfQI7nNwxAvIN9" allowfullscreen></iframe>
+  </div>
+
+    <footer>
+        <p>&copy; 2025 tienda de video juegos | Todos los derechos Reservados</p>
+    </footer>
+</body>
+</html>

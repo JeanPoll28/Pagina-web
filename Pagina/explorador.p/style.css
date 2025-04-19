@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+/*primera barra de opciones*/
+header {
+    background-color: #000000;
+    padding: 15px;
+    color: rgb(238, 238, 238); /*color del titulo accesorios para consolas*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255); /*color de letras de las opciones accesorios, mandos,consolas etc.*/
+    font-size: 18px;
+    border-radius: 100px;
+    background-color: rgb(238, 119, 228); /*color de fondo de las opciones accesorios, mandos, consolas etc.*/
+    
+}
+/*aqui acaba los estilos de la primerra barra de opciones*/
+
+/*estilos de donde van todo lo que son las imagenes*/
+section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.producto-item {
+    background-color: rgb(2, 2, 2); /*color del fondo de las imagenes*/
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(218, 48, 209, 0.1); /*sobra de las images*/
+    width: 250px;
+    text-align: center;
+}
+
+.producto-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; 
+}
+
+.producto-item img:hover {
+    transform: scale(1.1); /* <- zoom al pasar el mouse */
+}
+
+/*color de las descripciones de las imagenes*/
+.producto-item p {
+    color: #ffffff;
+}
+
+/*codigo de copy*/
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #28a745;
+    color: rgb(65, 57, 57);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tres columnas */
+    gap: 10px; /* Espaciado entre las columnas */
+    padding: 100px;
+}
+
+.producto-item img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 200px; /* Máximo tamaño para las imágenes */
+    margin-bottom: 10px;
+}
+
+/* Subtítulo en la esquina superior izquierda */
+.subtitulo {
+    position: absolute;
+    top: 490px; /*para bajar y subir el subtitulo mas numeros mas abajo va menos numeros arrriba*/
+    left: 10px;
+    background-color: rgba(12, 12, 12, 0.7); /* Fondo oscuro semi-transparente */
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    z-index: 1;
+}
+/*neuvo proyecto*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI',sans-serif;
+    background: #f4f4f4;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.imagen{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/*imagen al lado*/
+.imagen-al-lado img {
+    max-width: 590px; /*ajusta el tamaño a la izquierda segun necesites*/
+    width: 590px; /*ancho*/
+    height: 310px;/*aqui es donde se aumenta la altura*/
+
+    margin-top: 20px;    /* Espacio arriba */
+    margin-bottom: 20px; /* Espacio abajo */
+
+    /* Opciones de borde */
+    border: 4px solid black;      /* Borde*/
+    border-radius: 10px;            /* Esquinas redondeadas */
+}
+
+
+.contenido {
+    display: flex;
+    align-items: center;       /* Centra verticalmente */
+    gap: 20px;                 /* Espacio entre video e imagen */
+  }
+
+/*aqui termina lo de arriba */
+.imagen img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.imagen:hover img{
+    transform: scale(1.1);
+}
+
+.imagen::before{
+    content: "Ver más";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.imagen:hover::before{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*MODAL CSS USANDO CHECKBOX*/
+input[type="checkbox"]{
+        display: none;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+.modal-content{
+    background: rgb(5, 161, 233);
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+.modal-content img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.cerrar{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ec0606;
+}
+
+/*Mostrar Modal cuando el checkbox, se encuentre activo*/
+#img1:checked ~ .modal#modal1,
+#img2:checked ~ .modal#modal2,
+#img3:checked ~ .modal#modal3{
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*video de la primera columna*/
+.video-youtube {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+     /* Opciones de borde */
+     border: 4px solid black;      /* Borde*/
+     border-radius: 10px;            /* Esquinas redondeadas */
+}

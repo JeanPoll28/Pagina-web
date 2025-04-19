@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+h1{font-size: 1.5em;}
+h2{font-size: 2em;}
+h3{font-size: 2em; text-align: center;}
+p{font-size: 1em;}
+ul{list-style: none;}
+a{text-decoration: none; color: inherit ;cursor: pointer;}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("image/tienda.pgn.webp");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#hero h1{
+    color:white;
+}
+/* Estilos básicos para el contenido */
+.container {
+    position: left;
+    color: white;
+    padding: 0px;
+    max-width: 100%;
+    margin: auto;
+}
+header{
+    background-color: rgb(24, 23, 23);
+}
+
+button{
+    font-size: 1.0em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+    background-color: blueviolet;
+}
+button:hover{
+    background-color: rgb(86, 25, 143);
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    margin-left: 20px;
+    color: white;
+    font-size: 1.0em
+}
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.6em;
+    float: right;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-bottom: 25px;
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color:white;
+}
+header a:hover{
+    color: blueviolet
+}
+#nuestros-programas{
+    background-color: rgb(30, 30, 30);
+}
+#nuestros-programas .container{
+    padding: 150px 0px;
+}
+#nuestros-programas h2{
+    margin-top: 0;
+}
+#nuestros-programas p{
+    display: none;
+}
+#nuestros-programas .carta{
+    background-position: center center ;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 20px;
+
+}
+.carta:first-child{
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("image/Mario\ Kart.jpg");
+}
+.carta:nth-child(2){
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("image/five-freddy.jpg");
+    }
+    .carta:nth-child(3){
+        background: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+            )
+            ,url("image/images.png");
+        }
+        .carta:nth-child(4){
+            background: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+            )
+            ,url("image/Fortnite.jpg");
+        }
+
+        #final{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(30, 30, 30);
+            color: white;
+            height: 80vh;
+}
+.video-youtube{
+    border: 20%;
+}
+
+footer{
+    /*fondo oscuro para el pie d ela pagina*/
+    position: static;
+    background-color: #333;
+    color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+@media (min-width: 1025px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    
+    header .container{
+        flex-direction: row;
+        padding-bottom: 0;
+        justify-content: space-between;
+    
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding: 20px;
+    }
+    #hero{
+        font-size: 2em;
+    }
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+    }
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #nuestros-programas h3{
+        margin-top: 0;
+    }
+    #nuestros-programas .carta{
+        padding: 15px;
+    }
+    #final h2{
+    font-size: 3em;
+    }
+    #final button{
+        font-size: 1em;
+    }
+    footer{
+        grid-template-columns: 2fr auto auto;
+        display: grid;
+        gap: 1rem;
+    }
+
+}
